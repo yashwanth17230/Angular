@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-name-input',
-  templateUrl: './name-input.component.html',
-  styleUrls: ['./name-input.component.css']
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
-export class NameInputComponent {
-  firstName: string = 'John'; // Default value
-  lastName: string = 'Doe';   // Default value
-  fullName: string = '';
-
-  updateFullName() {
-    this.fullName = `${this.firstName} ${this.lastName}`;
-  }
+export class AppComponent {
+  title = 'Shopping_items';
 }
